@@ -1,0 +1,75 @@
+body {
+  /** background options:
+    * sandpaper.jpg
+	* light_rock_4.jpg
+  */	
+  background-image: url(../images/light_rock_4.jpg);   
+  background-color: #E1E2DC;
+}
+
+
+#site-name {
+  font-size: 3em;
+}
+
+#site-slogan {
+  font-size: 1.4em;
+}
+#page-wrapper {
+  /* To toggle between "fixed" and "liquid" looking, activate/deactivate the 3 lines below*/
+  width: 960px; 
+  margin-left: auto; 
+  margin-right: auto;
+  border-radius: 10px;
+}
+#page {
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.25);
+	border: 1px solid black;
+    margin-bottom: 15px;
+    margin-top: 15px;    
+    border-radius: 10px;
+}
+#footer-wrapper {
+  border-radius: 0px 0px 10px 10px;
+}
+#block-views-announcements-block,
+#block-block-2,
+#block-block-1,
+#block-block-5 {
+  border: 1px solid #898985;
+  border-radius: 10px;  
+}
+#block-block-5.content {
+  padding-top: 0;
+}
+#google_translate_element {
+  text-align: center;
+}
+ /* to make images span horizontally instead of vertically */
+.field-name-field-photo img,
+.field-name-field-listing-photo img,
+.field-name-field-listing-main-photo img {
+  float: left;
+  border: black 1px solid;
+  margin-right: 15px;
+}
+
+#header {
+  border-radius: 10px 10px 0px 0px;
+}
+.wXbody {
+  margin-left: 22px;
+}
+
+.view-vacant-lots .total {
+  font-size: 1.6em;
+}
+#block-menu-menu-administration {
+  text-align: center;
+  border: 1px black solid;
+  border-radius: 55px;
+}
+
+#block-menu-menu-administration .content {
+  padding-left: 60px;
+}

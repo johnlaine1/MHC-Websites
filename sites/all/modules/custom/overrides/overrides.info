@@ -1,0 +1,5 @@
+name = Overrides
+description = Overrides settings
+core = 7.x
+
+package = My Modules

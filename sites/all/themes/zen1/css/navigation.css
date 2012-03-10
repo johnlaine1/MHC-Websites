@@ -1,0 +1,174 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #000;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {  /* Add padding or margin to #navigation .section. */
+  /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
+}
+
+#navigation ul.links, /* Main menu and secondary menu links */
+#navigation .content ul /* Menu block links */ {
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  float: left; /* LTR */
+  padding 0 10px 0 0; 
+}
+
+.region-navigation {
+}
+
+#navigation .section {	
+}
+
+/*
+ * Main menu and Secondary menu links
+ */
+ 
+#main-menu {
+ }
+ 
+/* 
+ * bubplastic is a black gradient horizontal menu bar with a gray active and gray hover
+ */
+ 
+.bubplastic #navigation .section {
+	margin-top: 44px;
+}
+	 
+.bubplastic #main-menu {
+	width: 100%;
+	height: 27px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: #000000 url(../images/bg-bubplastic.gif) top left repeat-x;
+}
+
+.bubplastic #main-menu li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: transparent url(../images/bg-bubplastic-button.gif) top left no-repeat;	
+}
+
+.bubplastic #main-menu li a {
+	display: block;
+	height: 27px;
+	padding-left: 25px;
+	padding-right: 25px;
+	float: left;
+	text-transform: uppercase;
+	font-family: "Helvetica Neue",helvetica,"microsoft sans serif",arial,sans-serif;
+	font-size: 80%;
+	color: #FFFFFF;
+	text-decoration: none;	
+}
+
+.bubplastic #main-menu li a:hover,
+.bubplastic #main-menu li a.active {
+	background: transparent url(../images/bg-bubplastic-h-gray.gif) top left no-repeat;
+}
+/*
+ * End bubplastic
+ */
+ 
+/* main-menu-bartik-tabs  this is the default, class added to body tag in html.tpl.php */
+.main-menu-tabs #navigation .section {	  
+  padding-left: 15px;
+  margin-top: 40px;
+}
+
+.main-menu-tabs #main-menu {
+  font-size: 0.929em;
+  margin: 0;
+  padding: 0 15px;	
+}	
+
+.main-menu-tabs #main-menu li{ 
+  float: left; /* LTR */
+  list-style: none;
+  padding: 0 1px;
+  margin: 0 1px;
+}
+
+.main-menu-tabs #main-menu a {
+  color: #333;
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.7);
+  float: left; /* LTR */
+  height: 2.4em;
+  line-height: 2.4em;
+  padding: 0 0.8em;
+  text-decoration: none;
+  text-shadow: 0 1px #eee;
+  -khtml-border-radius-topleft: 8px;
+  -khtml-border-radius-topright: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.main-menu-tabs #main-menu a:hover,
+.main-menu-tabs #main-menu a:focus {
+  background: #f6f6f2;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.main-menu-tabs #main-menu a:active {
+  background: #b3b3b3;
+  background: rgba(255, 255, 255, 1);
+}
+
+.main-menu-tabs #main-menu li a.active {
+  border-bottom: none;
+  background-color: #fff;
+}
+/* End main-menu-bartik-tabs */	
+	
+#secondary-menu {
+  float: right;
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks
+ *
+ * Drupal core has limited ways in which it can display its menus. To get around
+ * these limitations, see http://drupal.org/project/menu_block
+ */
+.block-menu-block {
+}
+
+/* adjust admin menu at the top of the screen */
+#admin-menu-wrapper {
+	font-size: 0.9em;
+}
+
+html body.admin-menu {
+	margin-top: 50px !important;
+}

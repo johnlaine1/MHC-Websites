@@ -1,6 +1,24 @@
+# This is an altered version of Drupal's .gitignore file
+# The original is below. 
+
+# ----- start original
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
+#sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
+#sites/*/files
+#sites/*/private
+
+# ----- end original
+
+# Here is the altered version
+
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
 sites/*/private
+
+# Ignore files created by Drupal
+sites/*/files/css
+sites/*/files/js
+sites/*/files/xmlsitemap
+/nbproject/private/

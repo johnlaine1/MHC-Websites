@@ -1,0 +1,13 @@
+<?php
+/* wysiwyg overrides */
+ 
+function overrides_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if($context['profile']->editor == 'ckeditor') {
+    $settings['enterMode'] = 2;
+    $settings['shiftEnterMode'] = 1;
+  } else if($context['profile']->editor == 'tinymce') {
+    $settings['forced_root_block'] = FALSE;
+    $settings['force_br_newlines'] = TRUE;
+    $settings['force_p_newlines'] = FALSE;
+  }
+}
