@@ -21,4 +21,6 @@ sites/*/private
 sites/*/files/css
 sites/*/files/js
 sites/*/files/xmlsitemap
+
+# Netbeans
 /nbproject/private/
