@@ -18,16 +18,11 @@ body {
   margin-right: auto;  
 }
 
-#block-views-announcements-block,
-#block-block-2, /* 'Area Map' block */
-#block-block-5, /* 'Translate this website' block */
-#block-menu-menu-administration {
+/* Css to affect all blocks within sidebars */
+#sidebar-first div.block,
+#sidebar-second div.block {
   border: 1px solid #898985;
-  border-radius: 10px;  
-}
-
-#block-block-5.content {
-  padding-top: 0;
+  border-radius: 10px;
 }
 
 #google_translate_element {
