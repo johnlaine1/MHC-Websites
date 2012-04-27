@@ -11,3 +11,7 @@ function overrides_wysiwyg_editor_settings_alter(&$settings, $context) {
     $settings['force_p_newlines'] = FALSE;
   }
 }
+
+
+
+
