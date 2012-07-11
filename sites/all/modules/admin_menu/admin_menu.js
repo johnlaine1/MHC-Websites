@@ -1,3 +1,4 @@
+/* $Id: admin_menu.js,v 1.32 2010/02/20 23:44:00 sun Exp $ */
 (function($) {
 
 Drupal.admin = Drupal.admin || {};
@@ -70,7 +71,7 @@ Drupal.behaviors.adminMenuCollapsePermissions = {
       // Freeze width of first column to prevent jumping.
       $('#permissions th:first', context).css({ width: $('#permissions th:first', context).width() });
       // Attach click handler.
-      $modules = $('#permissions tr:has(td.module)', context).once('admin-menu-tweak-permissions', function () {
+      $('#permissions tr:has(td.module)', context).once('admin-menu-tweak-permissions', function () {
         var $module = $(this);
         $module.bind('click.admin-menu', function () {
           // @todo Replace with .nextUntil() in jQuery 1.4.
@@ -82,11 +83,7 @@ Drupal.behaviors.adminMenuCollapsePermissions = {
             $row.toggleClass('element-hidden');
           });
         });
-      });
-      // Get fragment from current URL.
-      var fragment = window.location.hash || '#';
-      // Collapse all but the targeted permission rows set.
-      $modules.not(':has(' + fragment + ')').trigger('click.admin-menu');
+      }).trigger('click.admin-menu');
     }
   }
 };
@@ -129,22 +126,7 @@ Drupal.admin.getCache = function (hash, onSuccess) {
       Drupal.admin.hashes.hash = status;
     }
   });
-};
-
-/**
- * TableHeader callback to determine top viewport offset.
- *
- * @see toolbar.js
- */
-Drupal.admin.height = function() {
-  var height = $('#admin-menu').outerHeight();
-  // In IE, Shadow filter adds some extra height, so we need to remove it from
-  // the returned height.
-  if ($('#admin-menu').css('filter') && $('#admin-menu').css('filter').match(/DXImageTransform\.Microsoft\.Shadow/)) {
-    height -= $('#admin-menu').get(0).filters.item("DXImageTransform.Microsoft.Shadow").strength;
-  }
-  return height;
-};
+}
 
 /**
  * @defgroup admin_behaviors Administration behaviors.
@@ -191,7 +173,7 @@ Drupal.admin.behaviors.replacements = function (context, settings, $adminMenu) {
   for (var item in settings.admin_menu.replacements) {
     $(item, $adminMenu).html(settings.admin_menu.replacements[item]);
   }
-};
+}
 
 /**
  * Inject destination query strings for current page.
@@ -202,7 +184,7 @@ Drupal.admin.behaviors.destination = function (context, settings, $adminMenu) {
       this.search += (!this.search.length ? '?' : '&') + Drupal.settings.admin_menu.destination;
     });
   }
-};
+}
 
 /**
  * Apply JavaScript-based hovering behaviors.

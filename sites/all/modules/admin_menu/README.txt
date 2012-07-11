@@ -1,3 +1,4 @@
+/* $Id: README.txt,v 1.30 2011/01/07 00:14:01 sun Exp $ */
 
 -- SUMMARY --
 
@@ -28,20 +29,15 @@ None.
 
 -- CONFIGURATION --
 
-* Configure user permissions in Administration Â» People Â» Permissions:
+* Configure user permissions in Administration » People » Permissions »
+  admin_menu module:
 
-  - Use the administration pages and help (System module)
-
-    The top-level administration categories require this permission to be
-    accessible. The administration menu will be empty unless this permission is
-    granted.
-
-  - Access administration menu
+  - access administration menu
 
     Users in roles with the "Access administration menu" permission will see
     the administration menu at the top of each page.
 
-  - Display Drupal links
+  - display drupal links
 
     Users in roles with the "Display drupal links" permission will receive
     links to drupal.org issue queues for all enabled contributed modules. The
@@ -52,8 +48,8 @@ None.
   is not displayed to a user who is not a member of a role with the "Administer
   users" permission.
 
-* Customize the menu settings in Administration Â» Configuration and modules Â»
-  Administration Â» Administration menu.
+* Customize the menu settings in Administration » Configuration and modules »
+  Administration » Administration menu.
 
 * To prevent administrative menu items from appearing twice, you may hide the
   "Management" menu block.
@@ -86,7 +82,7 @@ None.
 
 * If the menu does not display, check the following:
 
-  - Are the "Access administration menu" and "Use the administration pages and help"
+  - Are the "access administration menu" and "access administration pages"
     permissions enabled for the appropriate roles?
 
   - Does html.tpl.php of your theme output the $page_bottom variable?
